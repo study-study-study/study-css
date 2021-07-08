@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 /**
  * 完結したコンテンツ
@@ -265,7 +266,47 @@ export const Interactive = () => (
     </details>
 
     <dialog>
+      {/* <dialog open> */}
       <h2>タイトル</h2>
+      <input />
     </dialog>
   </>
 );
+
+const StyledBtn = styled.button.attrs({ type: "button" })`
+  color: red;
+  ::hover {
+    opacity: 0.8;
+  }
+  ::focus {
+    opacity: 0.8;
+  }
+  ::before {
+    content: "~";
+  }
+`;
+
+export const Css1: React.VFC = () => (
+  <div>
+    <StyledBtn>ボタン</StyledBtn>
+  </div>
+);
+
+const StyledMediaQuery = styled.div`
+  width: 100px;
+  height: 100px;
+  background-color: black;
+
+  @media (max-width: 599px) {
+    background-color: red;
+  }
+
+  @media (min-width: 600px) and (max-width: 768px) {
+    background-color: blue;
+  }
+
+  @media (min-width: 769px) {
+    background-color: green;
+  }
+`;
+export const MediaQuery: React.VFC = () => <StyledMediaQuery />;

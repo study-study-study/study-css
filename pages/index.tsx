@@ -24,6 +24,8 @@ const Page: NextPage = () => (
     <Tag.Link2 />
     <Tag.Text />
     <Tag.Interactive />
+    <Tag.Css1 />
+    <Tag.MediaQuery />
   </>
 );
 
