@@ -1,9 +1,16 @@
 import React from "react";
 import type { NextPage } from "next";
 import * as Tag from "~/presenter/Tag";
+import * as Box from "~/presenter/Box";
 
 const Page: NextPage = () => (
   <>
+    <Box.Box />
+    <Box.Box2 />
+    <Box.Box3 />
+    <Box.Content />
+    <Box.Width />
+
     <Tag.Article />
     <Tag.Nav />
     <Tag.Aside />
