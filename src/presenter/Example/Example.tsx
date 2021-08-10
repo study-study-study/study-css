@@ -15,4 +15,4 @@ const ExampleContainer: React.VFC<Props> = (props) => {
   return <ExampleComponent {...props} />;
 };
 
-export const Example = () => <ExampleContainer {...useExample()} />;
+export const Example: React.VFC = () => <ExampleContainer {...useExample()} />;
