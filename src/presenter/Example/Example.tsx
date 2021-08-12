@@ -1,18 +1,18 @@
 import React from "react";
 import { useExample } from "./useExample";
-import type { ComponentProps, Props } from "./type";
-
-const ExampleComponent: React.VFC<ComponentProps> = (props) => (
-  <button type="button" onClick={props.operations.toNG}>
-    失敗にする
-  </button>
-);
+import type { Props } from "./type";
+import * as Pc from "./Pc";
+import * as Sp from "./Sp";
 
 const ExampleContainer: React.VFC<Props> = (props) => {
   if (props.selectors.value === "ng") {
     return <>失敗</>;
   }
-  return <ExampleComponent {...props} />;
+
+  const Component = isPc() ? Pc.Example : Sp.Example;
+  return <Component {...props} />;
 };
 
 export const Example: React.VFC = () => <ExampleContainer {...useExample()} />;
+
+const isPc = (): boolean => false;

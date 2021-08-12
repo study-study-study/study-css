@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+export { Main } from "./Main";
 
 const StyledHeader = styled.header`
   background: url(/header-topline.svg) repeat-x;
@@ -21,18 +22,6 @@ const StyledBreadcrumb = styled.div`
     margin: 0 auto;
     padding: 12px 20px;
     max-width: 1040px;
-  }
-`;
-
-const StyledMain = styled.main`
-  background: url(/post-bg.svg) repeat-x;
-  background-position: 0 10px;
-
-  padding: 80px 4% 0 4%;
-  @media (min-width: 768px) {
-    max-width: 1040px;
-    margin: 0 auto;
-    padding: 80px 20px 0 20px;
   }
 `;
 
@@ -67,13 +56,6 @@ export const Breadcrumb = () => (
   <StyledBreadcrumb>
     <h2>パンクズ</h2>
   </StyledBreadcrumb>
-);
-
-export const Main = () => (
-  <StyledMain>
-    <h2>メイン</h2>
-    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-  </StyledMain>
 );
 
 export const Bottom = () => (
