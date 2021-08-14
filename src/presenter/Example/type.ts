@@ -5,6 +5,9 @@ export type ComponentProps = {
   operations: {
     toNG: () => void;
   };
+  app: {
+    isPc: boolean;
+  };
 };
 
 type ContainerProps = {

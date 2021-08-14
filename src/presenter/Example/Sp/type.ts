@@ -13,3 +13,5 @@ type ContainerProps = {
 };
 
 export type Props = ContainerProps & ComponentProps & Outer.Props;
+
+// 2ファイル以上で使用する場合typeを実装

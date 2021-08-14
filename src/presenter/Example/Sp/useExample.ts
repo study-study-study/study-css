@@ -10,6 +10,7 @@ export const useExample: UseExample = (props) => {
     },
     app: {
       isIOS: true,
+      ...props.app,
     },
     operations: {
       ...props.operations,

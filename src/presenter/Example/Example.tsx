@@ -9,10 +9,8 @@ const ExampleContainer: React.VFC<Props> = (props) => {
     return <>失敗</>;
   }
 
-  const Component = isPc() ? Pc.Example : Sp.Example;
+  const Component = props.app.isPc ? Pc.Example : Sp.Example;
   return <Component {...props} />;
 };
 
 export const Example: React.VFC = () => <ExampleContainer {...useExample()} />;
-
-const isPc = (): boolean => false;

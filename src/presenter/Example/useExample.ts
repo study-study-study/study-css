@@ -12,5 +12,8 @@ export const useExample = (): Props => {
     operations: {
       toNG: () => setValue("ng"),
     },
+    app: {
+      isPc: true,
+    },
   };
 };
