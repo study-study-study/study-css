@@ -1,7 +1,13 @@
 import React from "react";
 import type { NextPage } from "next";
-import { Example } from "~/presenter/Example";
+import { Example } from "~/presenter/CheatSheet/Example";
+import { Example as Example2 } from "~/presenter/CheatSheet/Example2";
 
-const Page: NextPage = () => <Example />;
+const Page: NextPage = () => (
+  <>
+    <Example />
+    <Example2 />
+  </>
+);
 
 export default Page;
