@@ -1,14 +1,11 @@
 import React from "react";
 import type * as Outer from "../type";
 
-type Props = { useHook: () => Outer.ComponentPropsForPc };
-export const Example: React.VFC<Props> = (props) => {
-  const state = props.useHook();
-
+export const Example: React.VFC<Outer.ComponentPropsForPc> = (props) => {
   return (
     <>
-      <>{state.foo}</>
-      <>{state.bar}</>
+      <>{props.foo}</>
+      <>{props.bar}</>
     </>
   );
 };

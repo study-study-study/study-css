@@ -1,32 +1,34 @@
-import React from "react";
-import type { ContainerProps } from "./type";
+import type * as type from "./type";
 
-type UseExamplePc = () => {
-  foo: string;
-  bar: string;
+type UseExampleBase = () => {
+  base: string;
+};
+const useExampleBase: UseExampleBase = () => {
+  return {
+    base: "base",
+  };
 };
 
-type UseExampleSp = () => {
-  foo: string;
-  baz: string;
-};
-
+type UseExamplePc = () => type.ComponentPropsForPc;
 export const useExamplePc: UseExamplePc = () => {
+  useExampleBase();
   return {
     foo: "pc",
     bar: "--",
   };
 };
 
+type UseExampleSp = () => type.ComponentPropsForSp;
 export const useExampleSp: UseExampleSp = () => {
+  useExampleBase();
   return {
     foo: "sp",
     baz: "--",
   };
 };
 
-export const useExampleContainer = (): ContainerProps => {
-  const hoge = "base";
+export const useExampleContainer = (): type.ContainerProps => {
+  const hoge = "~~";
 
   return {
     hoge,

@@ -4,20 +4,13 @@ import type { Props } from "./type";
 import * as Pc from "./Pc";
 import * as Sp from "./Sp";
 
-type ContainerProps = {
-  useHook: () => Props;
-};
-const ExampleContainer: React.VFC<ContainerProps> = (props) => {
-  const state = props.useHook();
-
-  if (state.selectors.value === "ng") {
+const ExampleContainer: React.VFC<Props> = (props) => {
+  if (props.selectors.value === "ng") {
     return <>失敗</>;
   }
 
-  const Component = state.app.isPc ? Pc.Example : Sp.Example;
-  return <Component {...state} />;
+  const Component = props.app.isPc ? Pc.Example : Sp.Example;
+  return <Component {...props} />;
 };
 
-export const Example: React.VFC = () => (
-  <ExampleContainer useHook={useExample} />
-);
+export const Example: React.VFC = () => <ExampleContainer {...useExample()} />;

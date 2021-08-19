@@ -1,30 +1,32 @@
-import React, { ReactPropTypes } from "react";
-import * as hooks from "./useExample";
+import React from "react";
+import { useExamplePc, useExampleSp, useExampleContainer } from "./useExample";
 import type { ContainerProps } from "./type";
 import * as Pc from "./Pc";
 import * as Sp from "./Sp";
 
-type Props = {
-  useHook: () => ContainerProps;
-};
-const ExampleContainer: React.VFC<Props> = (props) => {
-  const state = props.useHook();
+const Ppp: React.VFC = () => <Pc.Example {...useExamplePc()} />;
+const Sss: React.VFC = () => <Sp.Example {...useExampleSp()} />;
 
-  if (state.hoge === "xxx") {
+const ExampleContainer: React.VFC<ContainerProps> = (props) => {
+  if (props.hoge === "xxx") {
     return <>失敗</>;
   }
 
-  if (state.hoge === "pc") {
-    return <Pc.Example useHook={hooks.useExamplePc} />;
+  if (props.hoge === "aaa") {
+    return <>xxx</>;
   }
 
-  if (state.hoge === "sp") {
-    return <Sp.Example useHook={hooks.useExampleSp} />;
+  if (props.hoge === "pc") {
+    return <Ppp />;
   }
 
-  return null;
+  if (props.hoge === "sp") {
+    return <Sss />;
+  }
+
+  throw new Error("");
 };
 
 export const Example: React.VFC = () => (
-  <ExampleContainer useHook={hooks.useExampleContainer} />
+  <ExampleContainer {...useExampleContainer()} />
 );
