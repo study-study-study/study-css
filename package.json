@@ -30,7 +30,7 @@
   "devDependencies": {
     "@cybozu/eslint-config": "14.0.2",
     "@types/node": "16.4.13",
-    "@types/react": "17.0.16",
+    "@types/react": "17.0.19",
     "babel-plugin-styled-components": "1.13.2",
     "eslint": "7.32.0",
     "lint-staged": "11.1.2",
