@@ -6,6 +6,9 @@ import Head from "next/head";
 import { GlobalStyle } from "~/presenter/Styles/GlobalStyle";
 import { ErrorBoundary } from "~/presenter/ErrorBoundary";
 import dynamic from "next/dynamic";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 
 export const Page: NextPage<AppProps> = (props) => {
   const SafeHydrate = dynamic(() => import("~/presenter/SafeHydrate"), {

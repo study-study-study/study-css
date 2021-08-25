@@ -1,5 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPenNib,
+  faMapMarkerAlt,
+  faClock,
+} from "@fortawesome/free-solid-svg-icons";
 
 const StyledMain = styled.main`
   background: url(/post-bg.svg) repeat-x;
@@ -56,12 +62,73 @@ const StyledMark = styled.mark`
   background: linear-gradient(transparent 50%, #ffff7c 50%);
 `;
 
-const StyledUl = styled.ul`
+const StyledList = styled.ul`
   > li {
     margin-bottom: 1rem;
     line-height: 1.5;
   }
 `;
+
+const StyledFigure = styled.figure`
+  margin: 30px 0;
+`;
+
+const StyledFigureCaption = styled.figcaption`
+  margin-top: 5px;
+  font-size: 0.75rem;
+  color: #747474;
+  text-align: center;
+`;
+
+const StyledImgArea = styled.div`
+  display: flow-root;
+  margin: 30px 0;
+  > img {
+    width: 40%;
+    float: right;
+    margin: 0 0 1rem 1rem;
+  }
+  > p {
+    margin: 0;
+  }
+`;
+
+const StyledTagArea = styled.div`
+  margin-bottom: 5px;
+  font-size: 0.75rem;
+  line-height: 2;
+`;
+
+const StyledTag = styled.span`
+  margin: 0 3px 0 0;
+  padding: 2px 10px;
+  background: #73cbd6;
+  border-radius: 100px;
+`;
+
+const StyledItem = styled.a`
+  color: #fff;
+  text-decoration: none;
+`;
+
+// https://www.robinwieruch.de/styled-components
+const StyledInfo = {
+  Area: styled.div`
+    font-size: 0.75rem;
+    text-align: right;
+    margin-bottom: 3px;
+    padding-bottom: 15px;
+    background: url(/post-line.svg) bottom repeat-x;
+  `,
+  Items: styled.span`
+    margin: 0 10px 0 0;
+  `,
+  Item: styled(FontAwesomeIcon)`
+    font-size: 16px;
+    padding-right: 5px;
+    color: #73cbd6;
+  `,
+};
 
 export const Main: React.VFC = () => (
   <StyledMain>
@@ -69,7 +136,30 @@ export const Main: React.VFC = () => (
       <StyledMainTitle>
         知らない街の「地元」の空気に触れたい！ファーマーズマーケットには情報がいっぱい
       </StyledMainTitle>
+      <StyledTagArea>
+        <StyledTag>
+          <StyledItem href="walk">歩く</StyledItem>
+        </StyledTag>
+        <StyledTag>
+          <StyledItem href="eat">食べる</StyledItem>
+        </StyledTag>
+      </StyledTagArea>
+      <StyledInfo.Area>
+        <StyledInfo.Items>
+          <StyledInfo.Item icon={faPenNib} />
+          桑山みなと
+        </StyledInfo.Items>
+        <StyledInfo.Items>
+          <StyledInfo.Item icon={faMapMarkerAlt} />
+          サンフランシスコ
+        </StyledInfo.Items>
+        <StyledInfo.Items>
+          <StyledInfo.Item icon={faClock} />
+          2020.6.16
+        </StyledInfo.Items>
+      </StyledInfo.Area>
     </StyledPostHeader>
+
     <StyledPostContents>
       <StyledSubTitle>
         ファーマーズマーケットで見つけた「地元」の味
@@ -89,17 +179,31 @@ export const Main: React.VFC = () => (
         <br />
         次に目に入ったのは、オーガニック野菜をふんだんに使ったオープンサンドだ。たくさんの野菜を並べた農家のテントで販売されている。店主のご夫婦に聞くと、ここベイエリアは健康志向でオーガニック食材を求める人が多いという。普段スーパーで買う野菜の味とどれほど違うのか知りたくて、さっそくオーダーした。バケットの上にフレッシュな野菜のみじん切りがたっぷり敷き詰められている。味付けはオリーブオイルとバルサミコビネガーでシンプルに。そこに軽くグリルした野菜串とバジルがのせられ完成だ。実にシンプルなのだけれど、食べてみると、野菜の味がとても濃くて驚いた。
       </StyledContent>
+      <StyledFigure>
+        <img src="/post-photo1.jpg" alt="" />
+        <StyledFigureCaption>
+          グリルとフレッシュ、野菜の味の深みが変わってどちらも楽しめた
+        </StyledFigureCaption>
+      </StyledFigure>
       <StyledContent>
         今回、旅行でファーマーズマーケットを楽しむコツを3つ覚えたので、次は別の土地でもそのエリアの「市」を見つけて楽しむことにしよう。
       </StyledContent>
-
-      <StyledUl>
+      <StyledList>
         <li>お店の人になんでも質問をする</li>
         <li>調理販売しているフードスタンドは要チェック</li>
         <li>
           たくさん購入したくなるけれど、食べきれる量の果物や、お土産にできるジャムなどの加工品を選ぶ
         </li>
-      </StyledUl>
+      </StyledList>
+      <StyledImgArea>
+        <img src="/post-photo2.jpg" alt="" />
+        <p>
+          ファーマーズマーケットから市の中心街に移動する道でカフェを見つけた。歩き回ってちょっと疲れたしコーヒーでも飲んで休憩することにしよう。
+        </p>
+        <p>
+          店内にはけっこうお客さんがいた。ひとりで本を読んでいる若い男性、しずかにおしゃべりしている男女、常連らしいおじいちゃんは窓際で新聞を読んでいる。それぞれ自分の好きな時間を過ごしているという空気で居心地がいい。近くの席でパソコンを開いている女性と、なんとなく会話が始まった。彼女は教育関係の仕事をしていて、教材のアイディアを考えているところだった。
+        </p>
+      </StyledImgArea>
     </StyledPostContents>
     <StyledPostFooter>
       <p>
