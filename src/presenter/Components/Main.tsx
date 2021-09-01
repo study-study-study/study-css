@@ -5,7 +5,10 @@ import {
   faPenNib,
   faMapMarkerAlt,
   faClock,
+  faPenFancy,
 } from "@fortawesome/free-solid-svg-icons";
+import * as S from "./MainStyled";
+import * as SF from "./Footer/Styled";
 
 const StyledMain = styled.main`
   background: url(/post-bg.svg) repeat-x;
@@ -24,14 +27,6 @@ const StyledPostHeader = styled.header`
 `;
 
 const StyledPostContents = styled.div`
-  margin: 0 0 60px 0;
-  @media (min-width: 768px) {
-    max-width: 600px;
-    margin: 0 auto 60px auto;
-  }
-`;
-
-const StyledPostFooter = styled.footer`
   margin: 0 0 60px 0;
   @media (min-width: 768px) {
     max-width: 600px;
@@ -195,6 +190,18 @@ export const Main: React.VFC = () => (
           たくさん購入したくなるけれど、食べきれる量の果物や、お土産にできるジャムなどの加工品を選ぶ
         </li>
       </StyledList>
+
+      <S.InfoBox.Area>
+        <S.InfoBox.Text>
+          <strong>Green Farmers Market</strong>
+          <br />
+          毎週水曜日 9:00〜13:00
+          <br />
+          毎月第1日曜日 9:00〜15:00（フードスタンドは日曜日の出店が多い）
+          <br />
+        </S.InfoBox.Text>
+      </S.InfoBox.Area>
+
       <StyledImgArea>
         <img src="/post-photo2.jpg" alt="" />
         <p>
@@ -204,15 +211,45 @@ export const Main: React.VFC = () => (
           店内にはけっこうお客さんがいた。ひとりで本を読んでいる若い男性、しずかにおしゃべりしている男女、常連らしいおじいちゃんは窓際で新聞を読んでいる。それぞれ自分の好きな時間を過ごしているという空気で居心地がいい。近くの席でパソコンを開いている女性と、なんとなく会話が始まった。彼女は教育関係の仕事をしていて、教材のアイディアを考えているところだった。
         </p>
       </StyledImgArea>
+
+      <S.Chat.Area>
+        <S.Chat.List>
+          <S.Chat.Face>
+            <S.Chat.FaceImg src="/speaker1.jpg" alt="" />
+          </S.Chat.Face>
+          <S.Chat.Talk>
+            <S.Chat.TalkItem>学校で仕事をしているんですか？</S.Chat.TalkItem>
+          </S.Chat.Talk>
+        </S.Chat.List>
+
+        <S.Chat.List isResponse>
+          <S.Chat.Face isResponse>
+            <S.Chat.FaceImg src="/speaker2.jpg" alt="" />
+          </S.Chat.Face>
+          <S.Chat.Talk isResponse>
+            <S.Chat.TalkItem>
+              いいえ。子供向けの博物館で、ワークショップの運営をしています。
+            </S.Chat.TalkItem>
+          </S.Chat.Talk>
+        </S.Chat.List>
+      </S.Chat.Area>
     </StyledPostContents>
-    <StyledPostFooter>
-      <p>
-        <strong>ポストフッター</strong>
-      </p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum,
-      aspernatur fuga iusto debitis eaque eius provident libero suscipit quam!
-      Suscipit amet dignissimos id soluta quae, veniam fuga consequuntur placeat
-      magni!
-    </StyledPostFooter>
+    <SF.Footer.Area>
+      <SF.Footer.Title>
+        <SF.Footer.TitleIcon icon={faPenFancy} /> Profile
+      </SF.Footer.Title>
+      <SF.Footer.Profile>
+        <SF.Footer.ProfilePhot>
+          <SF.Footer.ProfilePhotImg src="/writer.jpg" alt="" />
+        </SF.Footer.ProfilePhot>
+        <SF.Footer.TextWrapper>
+          <SF.Footer.Text>
+            <strong>桑山みなと</strong>
+            <br />
+            大手出版社の編集者を経てライターとして独立。絵本、児童文学に詳しく、小学校の教員免許を持っているため、絵本作家や教育関係者へのインタビュー経験が多い。現在シアトルに長期滞在中で、Tansaku!では「アメリカ西海岸レポート」を連載している。
+          </SF.Footer.Text>
+        </SF.Footer.TextWrapper>
+      </SF.Footer.Profile>
+    </SF.Footer.Area>
   </StyledMain>
 );

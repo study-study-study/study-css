@@ -4,15 +4,14 @@ import * as S from "./styles";
 // https://www.robinwieruch.de/styled-components
 export const Main: React.VFC = () => (
   <>
-    <S.Info.Area>
-      <S.Info.Items>
-        <S.Info.Item>aa</S.Info.Item>
-      </S.Info.Items>
-    </S.Info.Area>
-
     <S.Card.Area>
-      <S.Card.Title>aa</S.Card.Title>
-      <S.Card.Description>bb</S.Card.Description>
+      <S.Card.Title>Card.Title</S.Card.Title>
+      <S.Card.Description>Card.Description</S.Card.Description>
     </S.Card.Area>
+
+    <S.CardArea>
+      <S.CardTitle>CardTitle</S.CardTitle>
+      <S.CardDescription>CardDescription</S.CardDescription>
+    </S.CardArea>
   </>
 );
