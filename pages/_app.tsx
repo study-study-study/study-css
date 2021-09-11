@@ -7,7 +7,13 @@ import { GlobalStyle } from "~/presenter/Styles/GlobalStyle";
 import { ErrorBoundary } from "~/presenter/ErrorBoundary";
 import dynamic from "next/dynamic";
 import { config } from "@fortawesome/fontawesome-svg-core";
+
+// ReactのComponentで使う用
 import "@fortawesome/fontawesome-svg-core/styles.css";
+
+// cssのafterなどで使う用
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 config.autoAddCss = false;
 
 export const Page: NextPage<AppProps> = (props) => {

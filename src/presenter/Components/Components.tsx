@@ -1,29 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 export { Main } from "./Main";
-
-const StyledHeader = styled.header`
-  background: url(/header-topline.svg) repeat-x;
-  border-bottom: 1px solid #d8d8d8;
-
-  @media (min-width: 768px) {
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: 1040px;
-  }
-`;
-
-const StyledBreadcrumb = styled.div`
-  display: none;
-  @media (min-width: 768px) {
-    display: block;
-    background: #efefef;
-
-    margin: 0 auto;
-    padding: 12px 20px;
-    max-width: 1040px;
-  }
-`;
+export { Header } from "./Header";
+export { Breadcrumb } from "./Breadcrumb";
 
 const StyledBottom = styled.div`
   background: url(/bottom-bg.svg);
@@ -45,18 +24,6 @@ const StyledFooter = styled.footer`
     padding: 60px 20px;
   }
 `;
-
-export const Header = () => (
-  <StyledHeader>
-    <h2>ヘッダー</h2>
-  </StyledHeader>
-);
-
-export const Breadcrumb = () => (
-  <StyledBreadcrumb>
-    <h2>パンクズ</h2>
-  </StyledBreadcrumb>
-);
 
 export const Bottom = () => (
   <StyledBottom>
