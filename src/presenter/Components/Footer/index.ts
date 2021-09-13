@@ -1,1 +1,1 @@
-export * from "./Styled";
+export { Footer } from "./Footer";

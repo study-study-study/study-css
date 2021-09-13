@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { device } from "~/presenter/constraints";
 
 const navBtnStyle = css`
   background-color: transparent;
@@ -7,11 +8,6 @@ const navBtnStyle = css`
   padding: 0;
   appearance: none;
 `;
-
-const device = {
-  /* 幅が 768px 以上であれば */
-  pc: `(min-width: 768px)`,
-};
 
 export const Area = styled.header`
   background: url(/header-topline.svg) repeat-x;

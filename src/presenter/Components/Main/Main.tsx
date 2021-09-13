@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import * as S from "./MainStyled";
 import * as SF from "./Footer/Styled";
+import { Bottom } from "./Bottom";
 
 const StyledMain = styled.main`
   background: url(/post-bg.svg) repeat-x;
@@ -251,5 +252,6 @@ export const Main: React.VFC = () => (
         </SF.Footer.TextWrapper>
       </SF.Footer.Profile>
     </SF.Footer.Area>
+    <Bottom />
   </StyledMain>
 );
