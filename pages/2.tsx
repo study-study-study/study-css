@@ -7,6 +7,7 @@ const Page: NextPage = () => (
     <Components.Header />
     <Components.Breadcrumb />
     <Components.Main />
+    <Components.Bottom />
     <Components.Footer />
   </>
 );
