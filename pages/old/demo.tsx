@@ -2,6 +2,8 @@ import React from "react";
 import type { NextPage } from "next";
 import { Some } from "~/presenter/old/CheatSheet/Some/Some";
 import { RenderProps } from "~/presenter/old/CheatSheet/Xxx";
+import Image from "next/image";
+import { css } from "styled-components";
 
 // クリック可能
 // 中央寄せ
@@ -13,7 +15,13 @@ const Page: NextPage = () => (
       }}
     >
       <a href="/hoge">
-        <img src="/banner-1.png" alt="Tansaku!" style={{ display: "inline" }} />
+        <Image
+          src="/banner-1.png"
+          alt="Tansaku!"
+          css={css`
+            display: inline;
+          `}
+        />
       </a>
     </div>
 
@@ -22,7 +30,13 @@ const Page: NextPage = () => (
         textAlign: "center",
       }}
     >
-      <img src="/banner-1.png" alt="Tansaku!" style={{ display: "inline" }} />
+      <Image
+        src="/banner-1.png"
+        alt="Tansaku!"
+        css={css`
+          display: inline;
+        `}
+      />
     </div>
 
     <Some />

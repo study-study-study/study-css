@@ -6,7 +6,7 @@ const is = {
 
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: "@cybozu/eslint-config/presets/react-typescript-prettier",
+  extends: ["@cybozu/eslint-config/presets/typescript-prettier", "next"],
   rules: {
     "jsx-a11y/anchor-is-valid": [
       is.error,
