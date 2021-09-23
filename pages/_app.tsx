@@ -16,7 +16,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 config.autoAddCss = false;
 
-export const Page: NextPage<AppProps> = (props) => {
+const Page: NextPage<AppProps> = (props) => {
   const SafeHydrate = dynamic(() => import("~/presenter/SafeHydrate"), {
     ssr: false,
   });

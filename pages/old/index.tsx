@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
-import * as Tag from "~/presenter/Tag";
-import * as Box from "~/presenter/Box";
+import * as Tag from "~/presenter/old/Tag";
+import * as Box from "~/presenter/old/Box";
 
 const Page: NextPage = () => (
   <>

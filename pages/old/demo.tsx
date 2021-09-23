@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
-import { Some } from "~/presenter/CheatSheet/Some";
-import { RenderProps } from "~/presenter/CheatSheet/Xxx";
+import { Some } from "~/presenter/old/CheatSheet/Some/Some";
+import { RenderProps } from "~/presenter/old/CheatSheet/Xxx";
 
 // クリック可能
 // 中央寄せ

@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import * as Components from "~/presenter/Components";
+import * as Components from "~/presenter/old/Components";
 
 const Page: NextPage = () => (
   <>
