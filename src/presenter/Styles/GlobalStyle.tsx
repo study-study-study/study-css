@@ -12,10 +12,10 @@ export const GlobalStyle = styled.createGlobalStyle`
   }
 
   /* 画像を伸縮させて、親要素に収まるようにする ただし、実際の画像サイズより拡大しない */
-  img {
-    max-width: 100%;
-    height: auto;
-    /* 画像の下にスペースができるのを防ぐ */
-    vertical-align: bottom;
-  }
+  /* img { */
+  /* max-width: 100%;
+    height: auto; */
+  /* 画像の下にスペースができるのを防ぐ */
+  /* vertical-align: bottom; */
+  /* } */
 `;
