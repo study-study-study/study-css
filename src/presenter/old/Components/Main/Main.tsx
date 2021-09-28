@@ -1,24 +1,25 @@
-import React from "react";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+/* eslint-disable @next/next/no-img-element */
+import React from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPenNib,
   faMapMarkerAlt,
   faClock,
   faPenFancy,
-} from "@fortawesome/free-solid-svg-icons";
-import * as S from "./MainStyled";
-import * as SF from "./Footer/Styled";
+} from '@fortawesome/free-solid-svg-icons';
+import * as S from './MainStyled';
+import * as SF from './Footer/Styled';
 
 const StyledMain = styled.main`
+  padding: 80px 4% 0 4%;
   background: url(/post-bg.svg) repeat-x;
   background-position: 0 10px;
 
-  padding: 80px 4% 0 4%;
   @media (min-width: 768px) {
     max-width: 1040px;
-    margin: 0 auto;
     padding: 80px 20px 0 20px;
+    margin: 0 auto;
   }
 `;
 
@@ -28,6 +29,7 @@ const StyledPostHeader = styled.header`
 
 const StyledPostContents = styled.div`
   margin: 0 0 60px 0;
+
   @media (min-width: 768px) {
     max-width: 600px;
     margin: 0 auto 60px auto;
@@ -46,11 +48,11 @@ const StyledMainTitle = styled.h1`
 `;
 
 const StyledSubTitle = styled.h1`
-  margin: 60px 0 30px 0;
   padding: 1rem 0;
+  margin: 60px 0 30px 0;
+  font-size: 1.25rem;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
-  font-size: 1.25rem;
 `;
 
 const StyledMark = styled.mark`
@@ -78,11 +80,13 @@ const StyledFigureCaption = styled.figcaption`
 const StyledImgArea = styled.div`
   display: flow-root;
   margin: 30px 0;
+
   > img {
-    width: 40%;
     float: right;
+    width: 40%;
     margin: 0 0 1rem 1rem;
   }
+
   > p {
     margin: 0;
   }
@@ -95,8 +99,8 @@ const StyledTagArea = styled.div`
 `;
 
 const StyledTag = styled.span`
-  margin: 0 3px 0 0;
   padding: 2px 10px;
+  margin: 0 3px 0 0;
   background: #73cbd6;
   border-radius: 100px;
 `;
@@ -109,18 +113,18 @@ const StyledItem = styled.a`
 // https://www.robinwieruch.de/styled-components
 const StyledInfo = {
   Area: styled.div`
+    padding-bottom: 15px;
+    margin-bottom: 3px;
     font-size: 0.75rem;
     text-align: right;
-    margin-bottom: 3px;
-    padding-bottom: 15px;
     background: url(/post-line.svg) bottom repeat-x;
   `,
   Items: styled.span`
     margin: 0 10px 0 0;
   `,
   Item: styled(FontAwesomeIcon)`
-    font-size: 16px;
     padding-right: 5px;
+    font-size: 16px;
     color: #73cbd6;
   `,
 };
@@ -203,6 +207,7 @@ export const Main: React.VFC = () => (
       </S.InfoBox.Area>
 
       <StyledImgArea>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/post-photo2.jpg" alt="" />
         <p>
           ファーマーズマーケットから市の中心街に移動する道でカフェを見つけた。歩き回ってちょっと疲れたしコーヒーでも飲んで休憩することにしよう。

@@ -1,21 +1,19 @@
-const is = {
-  off: 0,
-  warn: 1,
-  error: 2,
-};
-
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: ["@cybozu/eslint-config/presets/typescript-prettier", "next"],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'next',
+    'next/core-web-vitals',
+    'prettier',
+  ],
   rules: {
-    "jsx-a11y/anchor-is-valid": [
-      is.error,
-      {
-        components: ["Link"],
-        specialLink: ["hrefLeft", "hrefRight"],
-        aspects: ["invalidHref", "preferButton"],
-      },
-    ],
-    "@typescript-eslint/no-explicit-any": is.error,
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
   },
 };

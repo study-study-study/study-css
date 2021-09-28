@@ -1,13 +1,13 @@
-export type ComponentPropsForPc = {
+export interface ComponentPropsForPc {
   foo: string;
   bar: string;
-};
+}
 
-export type ComponentPropsForSp = {
+export interface ComponentPropsForSp {
   foo: string;
   baz: string;
-};
+}
 
-export type ContainerProps = {
+export interface ContainerProps {
   hoge: string;
-};
+}

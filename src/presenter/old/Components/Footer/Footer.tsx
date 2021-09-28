@@ -1,10 +1,11 @@
-import React from "react";
-import * as S from "./Styled";
+import React from 'react';
+import * as S from './Styled';
 
 export const Footer = () => (
   <S.Area>
     <S.LogoSection>
       <S.LogoLink href="index.html">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/footer-logo.svg" alt="Tansaku!" />
       </S.LogoLink>
     </S.LogoSection>

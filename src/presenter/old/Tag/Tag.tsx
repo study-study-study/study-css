@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+/* eslint-disable @next/next/no-img-element */
+import React from 'react';
+import styled from 'styled-components';
 
 /**
  * 完結したコンテンツ
@@ -123,7 +124,7 @@ export const Line = () => (
 /**
  * 整形済み的スト
  */
-export const Pre = () => <pre>{`const fn = () => "fn";`}</pre>;
+export const Pre = () => <pre>{'const fn = () => "fn";'}</pre>;
 
 /**
  * 引用済みテキスト
@@ -273,16 +274,19 @@ export const Interactive = () => (
   </>
 );
 
-const StyledBtn = styled.button.attrs({ type: "button" })`
+const StyledBtn = styled.button.attrs({ type: 'button' })`
   color: red;
-  ::hover {
+
+  &:hover {
     opacity: 0.8;
   }
-  ::focus {
+
+  &:focus {
     opacity: 0.8;
   }
+
   ::before {
-    content: "~";
+    content: '~';
   }
 `;
 

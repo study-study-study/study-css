@@ -1,17 +1,17 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledBox = styled.div`
-  border: solid 10px;
-  margin: 50px;
   padding: 20px;
+  margin: 50px;
+  border: solid 10px;
 `;
 export const Box: React.VFC = () => <StyledBox>ボックス</StyledBox>;
 
 const StyledBox2 = styled.p`
   width: 100px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 `;
 export const Box2: React.VFC = () => <StyledBox2>中央</StyledBox2>;
 
@@ -83,12 +83,12 @@ export const BoxLayout = () => (
 );
 
 const StyleContainer = styled.div`
-  border: solid 1px;
   display: flex;
+  border: solid 1px;
 `;
 const StyleContainer2 = styled.div`
-  border: solid 1px;
   display: inline-flex;
+  border: solid 1px;
 `;
 export const FlexLayout = () => (
   <>
@@ -130,7 +130,7 @@ export const FloatLayout = () => (
 
 export const FloatLayout2 = () => (
   <>
-    <div style={{ display: "flow-root" }}>
+    <div style={{ display: 'flow-root' }}>
       <StyledItem>A</StyledItem>
       <StyledFloatItem>B</StyledFloatItem>
       <StyledItem>C</StyledItem>
@@ -150,7 +150,7 @@ export const FloatLayout3 = () => (
       <StyledFloatItem>B</StyledFloatItem>
       <StyledItem>C</StyledItem>
     </div>
-    <div style={{ display: "flow-root" }}>
+    <div style={{ display: 'flow-root' }}>
       <StyledItem>AA</StyledItem>
       <StyledItem>BB</StyledItem>
       <StyledItem>CC</StyledItem>
@@ -169,10 +169,13 @@ export const FlexBox = () => (
   </StyledFlexBox>
 );
 
-const StyledItem2 = styled.span``;
+const StyledItem2 = styled.span`
+  display: inline-block;
+`;
 
 const StyledFlexBox2 = styled.div`
   display: flex;
+
   & > div {
     background-color: red;
   }
@@ -214,23 +217,23 @@ export const FlexBox3 = () => (
 
 const StyledGridWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px 120px;
   grid-template-areas:
-    "a b b"
-    "a c d"
-    "a e f";
+    'a b b'
+    'a c d'
+    'a e f';
+  grid-template-rows: 100px 100px 120px;
+  grid-template-columns: 1fr 1fr 1fr;
   border: solid 1px;
 `;
 
 export const Grid = () => (
   <StyledGridWrapper>
-    <div style={{ gridArea: "a" }}>-A-</div>
-    <div style={{ gridArea: "b" }}>B</div>
-    <div style={{ gridArea: "c" }}>C</div>
-    <div style={{ gridArea: "d" }}>D</div>
-    <div style={{ gridArea: "e" }}>E</div>
-    <div style={{ gridArea: "f" }}>F</div>
+    <div style={{ gridArea: 'a' }}>-A-</div>
+    <div style={{ gridArea: 'b' }}>B</div>
+    <div style={{ gridArea: 'c' }}>C</div>
+    <div style={{ gridArea: 'd' }}>D</div>
+    <div style={{ gridArea: 'e' }}>E</div>
+    <div style={{ gridArea: 'f' }}>F</div>
   </StyledGridWrapper>
 );
 
@@ -258,9 +261,9 @@ const StyledFloatWrapper = styled.div`
 `;
 
 const StyledImgFloat1 = styled.img.attrs({
-  src: "/room_office_clean.png",
-  alt: "オフィスの画像",
-  width: "100px",
+  src: '/room_office_clean.png',
+  alt: 'オフィスの画像',
+  width: '100px',
 })`
   float: left;
 `;
@@ -276,33 +279,30 @@ export const Float1 = () => (
 
 const StyledPosition1Wrapper = styled.div`
   position: relative;
-  border: solid 1px;
   height: 500px;
+  border: solid 1px;
 `;
 const StyledPosition1Item1 = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: red;
   width: 100px;
-
   height: 100px;
+  background-color: red;
 `;
 const StyledPosition1Item2 = styled.div`
   position: absolute;
-  background-color: green;
   top: 90px;
   width: 100px;
   height: 100px;
+  background-color: green;
 `;
 const StyledPosition1Item3 = styled.div`
-  width: 100px;
-
   position: absolute;
-
   z-index: 1;
-  background-color: blue;
+  width: 100px;
   height: 100px;
+  background-color: blue;
 `;
 export const Position1 = () => (
   <StyledPosition1Wrapper>
@@ -314,7 +314,7 @@ export const Position1 = () => (
 
 const StyledContent1 = styled.h1`
   ::before {
-    content: "New";
+    content: 'New';
   }
 `;
 export const Content1 = () => <StyledContent1>Foo</StyledContent1>;
@@ -323,9 +323,10 @@ const StyledItemVisibility1 = styled.div`
   height: 50px;
 `;
 const StyledItemVisibility2 = styled.div`
+  height: 50px;
+
   /* display: none; */
   visibility: hidden;
-  height: 50px;
 `;
 const StyledItemVisibility3 = styled.div`
   height: 50px;
@@ -343,12 +344,12 @@ const StyledFlex1Container = styled.div`
   display: flex;
 `;
 const StyledFlex1 = styled.div`
-  background-color: red;
   flex: 0 0 100px;
+  background-color: red;
 `;
 const StyledFlex1A = styled.div`
-  background-color: green;
   flex: 0 0 200px;
+  background-color: green;
 `;
 export const Flex1 = () => (
   <StyledFlex1Container>
@@ -361,13 +362,13 @@ const StyledFlex2Container = styled.div`
   display: flex;
 `;
 const StyledFlex2 = styled.div`
-  background-color: red;
   /* ポジティブスペース(余白)に応じて伸びる */
   flex: 1 0 100px;
+  background-color: red;
 `;
 const StyledFlex2A = styled.div`
-  background-color: green;
   flex: 0 0 200px;
+  background-color: green;
 `;
 export const Flex2 = () => (
   <StyledFlex2Container>
@@ -381,13 +382,13 @@ const StyledFlex3Container = styled.div`
   width: 100px;
 `;
 const StyledFlex3 = styled.div`
-  background-color: red;
   /* ネガティブスペース(余白)に応じて縮む */
   flex: 0 1 100px;
+  background-color: red;
 `;
 const StyledFlex3A = styled.div`
-  background-color: green;
   flex: 0 0 200px;
+  background-color: green;
 `;
 export const Flex3 = () => (
   <StyledFlex3Container>
@@ -398,16 +399,17 @@ export const Flex3 = () => (
 
 const StyledFlex4Container = styled.div`
   display: flex;
+
   /* 余白 */
   gap: 20px;
 `;
 const StyledFlex4 = styled.div`
-  background-color: red;
   flex: 0 0 100px;
+  background-color: red;
 `;
 const StyledFlex4A = styled.div`
-  background-color: green;
   flex: 0 0 200px;
+  background-color: green;
 `;
 export const Flex4 = () => (
   <StyledFlex4Container>
@@ -421,12 +423,12 @@ const StyledFlex5Container = styled.div`
   margin: 0 20px;
 `;
 const StyledFlex5 = styled.div`
-  background-color: red;
   flex: 0 0 100px;
+  background-color: red;
 `;
 const StyledFlex5A = styled.div`
-  background-color: green;
   flex: 0 0 200px;
+  background-color: green;
 `;
 export const Flex5 = () => (
   <StyledFlex5Container>
@@ -439,12 +441,12 @@ const StyledFlex6Container = styled.div`
   display: flex;
 `;
 const StyledFlex6 = styled.div`
-  background-color: red;
   flex: 1 1 0;
+  background-color: red;
 `;
 const StyledFlex6A = styled.div`
-  background-color: green;
   flex: 1 1 0;
+  background-color: green;
 `;
 export const Flex6 = () => (
   <StyledFlex6Container>
@@ -457,14 +459,14 @@ const StyledFlex7Container = styled.div`
   display: flex;
 `;
 const StyledFlex7 = styled.div`
-  background-color: red;
   flex: 1 1 0;
   order: 2;
+  background-color: red;
 `;
 const StyledFlex7A = styled.div`
-  background-color: green;
   flex: 1 1 0;
   order: 1;
+  background-color: green;
 `;
 export const Flex7 = () => (
   <StyledFlex7Container>
@@ -496,16 +498,16 @@ const StyledFlex8Container = styled.div`
   width: 400px;
 `;
 const StyledFlex8A = styled.div`
-  background-color: green;
   flex: 0 0 200px;
+  background-color: green;
 `;
 const StyledFlex8B = styled.div`
-  background-color: blue;
   flex: 0 0 200px;
+  background-color: blue;
 `;
 const StyledFlex8C = styled.div`
-  background-color: red;
   flex: 0 0 200px;
+  background-color: red;
 `;
 export const Flex8 = () => (
   <StyledFlex8Container>
@@ -526,12 +528,12 @@ const StyledFlex81Container = styled.div`
   border: solid 1px;
 `;
 const StyledFlex81A = styled.div`
-  background-color: green;
   flex: 0 0 200px;
+  background-color: green;
 `;
 const StyledFlex81B = styled.div`
-  background-color: blue;
   flex: 0 0 200px;
+  background-color: blue;
 `;
 export const Flex81 = () => (
   <StyledFlex81Container>
@@ -546,18 +548,18 @@ const StyledFlex82Container = styled.div`
   margin-bottom: 10px;
 `;
 const StyledFlex82A = styled.div`
-  background-color: green;
   height: 50px;
+  background-color: green;
 `;
 const StyledFlex82B = styled.div`
-  background-color: blue;
   height: 150px;
+  background-color: blue;
 `;
 const StyledFlex82C = styled.div`
-  background-color: red;
-  height: 100px;
   /* 個別調整 */
   align-self: flex-end;
+  height: 100px;
+  background-color: red;
 `;
 export const Flex82 = () => (
   <StyledFlex82Container>
@@ -571,6 +573,7 @@ const StyledGrid1Wrapper = styled.div`
   display: grid;
   grid-template-rows: 100px 200px;
   grid-template-columns: 50px 1fr 250px;
+
   > div {
     border: solid 1px;
   }
@@ -590,6 +593,7 @@ const StyledGrid2Wrapper = styled.div`
   display: grid;
   grid-template-rows: 100px 200px;
   grid-template-columns: 50px minmax(800px, 1fr) 250px;
+
   > div {
     border: solid 1px;
   }
@@ -609,6 +613,7 @@ const StyledGrid3Wrapper = styled.div`
   display: grid;
   grid-template-rows: 100px 200px 100px;
   grid-template-columns: repeat(auto-fill, minmax(150px, 200px));
+
   > div {
     border: solid 1px;
   }
@@ -636,6 +641,7 @@ const StyledGrid4Wrapper = styled.div`
   display: grid;
   grid-template-rows: 100px;
   grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+
   > div {
     border: solid 1px;
   }
@@ -657,24 +663,23 @@ export const Grid4 = () => (
 const StyledGrid5Wrapper = styled.div`
   display: grid;
   grid-template-areas:
-    "head head head"
-    "sub main main"
-    "foot foot foot";
-
+    'head head head'
+    'sub main main'
+    'foot foot foot';
   grid-template-rows: 50px 150px 100px;
   grid-template-columns: 100px 200px 300px;
-
   gap: 10px;
+
   > div {
     border: solid 1px;
   }
 `;
 export const Grid5 = () => (
   <StyledGrid5Wrapper>
-    <div style={{ gridArea: "head" }}>head1</div>
-    <div style={{ gridArea: "sub" }}>sub</div>
-    <div style={{ gridArea: "main" }}>main</div>
-    <div style={{ gridArea: "foot" }}>foot</div>
+    <div style={{ gridArea: 'head' }}>head1</div>
+    <div style={{ gridArea: 'sub' }}>sub</div>
+    <div style={{ gridArea: 'main' }}>main</div>
+    <div style={{ gridArea: 'foot' }}>foot</div>
   </StyledGrid5Wrapper>
 );
 

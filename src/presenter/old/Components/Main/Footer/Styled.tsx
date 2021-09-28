@@ -1,22 +1,25 @@
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Footer = {
   Area: styled.footer`
     margin: 0 0 60px 0;
+
     @media (min-width: 768px) {
       max-width: 600px;
       margin: 0 auto 60px auto;
     }
   `,
   Title: styled.h2`
-    background-color: black;
-    color: white;
     display: inline-block;
     padding: 10px 30px;
+    color: white;
+    background-color: black;
     border-radius: 10px 10px 0 0;
   `,
-  TitleIcon: styled(FontAwesomeIcon)``,
+  TitleIcon: styled(FontAwesomeIcon)`
+    display: block;
+  `,
   Profile: styled.div`
     display: flex;
     padding: 1rem;

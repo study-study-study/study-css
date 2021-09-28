@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 /**
  * SSR無効化用コンテナ

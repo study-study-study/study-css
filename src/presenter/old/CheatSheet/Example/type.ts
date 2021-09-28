@@ -1,4 +1,4 @@
-export type ComponentProps = {
+export interface ComponentProps {
   selectors: {
     items: string[];
   };
@@ -8,12 +8,12 @@ export type ComponentProps = {
   app: {
     isPc: boolean;
   };
-};
+}
 
-type ContainerProps = {
+interface ContainerProps {
   selectors: {
-    value: "ok" | "ng";
+    value: 'ok' | 'ng';
   };
-};
+}
 
 export type Props = ContainerProps & ComponentProps;

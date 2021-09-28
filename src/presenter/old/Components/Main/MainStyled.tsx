@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const InfoBox = {
   Area: styled.div`
-    margin: 30px 0;
     padding: 2rem;
+    margin: 30px 0;
     border: 4px solid #b8e5ea;
   `,
   Text: styled.p`
@@ -21,7 +21,7 @@ export const Chat = {
   Area: styled.div`
     margin: 30px 0;
   `,
-  List: styled.div<Pick<ChatModifier, "isResponse">>`
+  List: styled.div<Pick<ChatModifier, 'isResponse'>>`
     display: flex;
     margin: 15px 0;
     ${(props) =>
@@ -30,7 +30,7 @@ export const Chat = {
         flex-direction: row-reverse;
       `}
   `,
-  Face: styled.div<Pick<ChatModifier, "isResponse">>`
+  Face: styled.div<Pick<ChatModifier, 'isResponse'>>`
     flex: 0 0 70px;
     ${(props) =>
       props.isResponse
@@ -44,7 +44,7 @@ export const Chat = {
   FaceImg: styled.img`
     border-radius: 50%;
   `,
-  Talk: styled.div<Pick<ChatModifier, "isResponse">>`
+  Talk: styled.div<Pick<ChatModifier, 'isResponse'>>`
     flex: 1 1 auto;
     padding: 1.5rem;
     border-radius: 20px;

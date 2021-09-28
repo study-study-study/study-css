@@ -1,16 +1,16 @@
-import type * as Outer from "../type";
+import type * as Outer from '../type';
 
-type ComponentProps = {
+interface ComponentProps {
   selectors: {
     deviceName: string;
   };
-};
+}
 
-type ContainerProps = {
+interface ContainerProps {
   app: {
     isIOS: boolean;
   };
-};
+}
 
 export type Props = ContainerProps & ComponentProps & Outer.Props;
 

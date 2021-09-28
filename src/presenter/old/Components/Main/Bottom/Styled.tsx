@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { device } from "~/presenter/constraints";
+import styled from 'styled-components';
+import { device } from '~/presenter/constraints';
 
 export const BannerArea = styled.div`
-  background: url(/bottom-bg.svg);
   padding: 60px 4% 0 4%;
+  background: url(/bottom-bg.svg);
 
   @media ${device.pc} {
-    margin: 0 auto;
-    padding: 60px 20px 0 20px;
     max-width: 1040px;
+    padding: 60px 20px 0 20px;
+    margin: 0 auto;
   }
 `;
 
@@ -37,13 +37,15 @@ export const BannerItemImg = styled.img`
   }
 `;
 
-export const SnsArea = styled.div``;
+export const SnsArea = styled.div`
+  display: block;
+`;
 
 export const SnsSectionTitle = styled.h2`
   margin: 0 0 15px 0;
-  font-family: "Croissant One", cursive;
-  font-weight: 400;
+  font-family: 'Croissant One', cursive;
   font-size: 1.875rem;
+  font-weight: 400;
   text-align: center;
 `;
 
@@ -61,12 +63,12 @@ export const SnsIcon = styled.a`
   display: block;
   width: 70px;
   height: 70px;
-  background: #73cbd6;
-  border-radius: 50%;
   font-size: 30px;
   line-height: 70px;
+  color: #fff;
   text-align: center;
-  color: #ffffff;
+  background: #73cbd6;
+  border-radius: 50%;
 `;
 
 export const GoTopArea = styled.div`
@@ -76,12 +78,13 @@ export const GoTopArea = styled.div`
 export const GoTopIConWrapper = styled.a`
   display: inline-block;
   padding: 1rem 4rem;
-  background: #000000;
-  border-radius: 20px 20px 0 0;
   font-size: 1.25rem;
+  color: #fff;
   text-align: center;
-  color: #ffffff;
+  background: #000;
+  border-radius: 20px 20px 0 0;
   opacity: 0.6;
+
   &:hover {
     opacity: 0.8;
   }

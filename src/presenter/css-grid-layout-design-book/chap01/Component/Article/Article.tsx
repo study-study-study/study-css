@@ -1,19 +1,19 @@
-import React from "react";
-import Image from "next/image";
-import * as S from "./styles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import Image from 'next/image';
+import * as S from './styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faTwitter,
   faFacebook,
   faGooglePlus,
-} from "@fortawesome/free-brands-svg-icons";
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 
 export const Article: React.VFC = () => (
   <S.Area>
     <S.MainTitle>夏の海のアクティビティ</S.MainTitle>
     <S.SubTitle>SUMMER ACTIVITY</S.SubTitle>
     <S.DateTime dateTime="2020-08-01">
-      <span></span> 2020/08/01
+      <span /> 2020/08/01
     </S.DateTime>
     <S.LeadTxt>
       おでかけ妄想シリーズ。今回は「夏の海のアクティビティ」というお題をいただきましたので、南国気分でお届けします。
@@ -61,17 +61,17 @@ export const Article: React.VFC = () => (
       <ul>
         <li>
           <a href="dummy">
-            <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faTwitter} />
           </a>
         </li>
         <li>
           <a href="dummy">
-            <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faFacebook} />
           </a>
         </li>
         <li>
           <a href="dummy">
-            <FontAwesomeIcon icon={faGooglePlus}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faGooglePlus} />
           </a>
         </li>
       </ul>

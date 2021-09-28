@@ -1,18 +1,19 @@
-import React from "react";
-import * as S from "./Styled";
+import React from 'react';
+import * as S from './Styled';
 
-type Props = {
+interface Props {
   ui: S.NavBtnModifier;
   operations: {
     toggleNav: () => void;
   };
-};
+}
 
 const HeaderComponent: React.VFC<Props> = (props) => (
   <S.Area>
     <S.TitleSection>
       <h1>
         <a href="index.html">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/header-logo.svg" alt="Tansaku!" />
         </a>
       </h1>

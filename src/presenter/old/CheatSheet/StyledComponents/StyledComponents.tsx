@@ -1,5 +1,5 @@
-import React from "react";
-import styled, { css } from "styled-components";
+import React from 'react';
+import styled, { css } from 'styled-components';
 
 const component1Css = css`
   /* > は直下要素を表します。 */
@@ -92,8 +92,9 @@ const component5Css = css`
   p:hover {
     color: red;
   }
+
   span::before {
-    content: "---";
+    content: '---';
   }
 `;
 
