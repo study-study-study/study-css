@@ -57,5 +57,3 @@ export const Sns = styled.aside`
   grid-row: 8 / 13;
   grid-column: 5;
 `;
-
-// テストファイルのカタチェック

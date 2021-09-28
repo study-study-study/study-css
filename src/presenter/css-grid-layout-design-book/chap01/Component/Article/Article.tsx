@@ -1,12 +1,12 @@
-import React from 'react';
-import Image from 'next/image';
-import * as S from './styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebook,
   faGooglePlus,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
+import React from 'react';
+import * as S from './styles';
 
 export const Article: React.VFC = () => (
   <S.Area>

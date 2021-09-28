@@ -10,7 +10,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'next',
     'next/core-web-vitals',
-    'prettier',
+    'prettier', // 最後に書く
   ],
   rules: {
     'no-unused-vars': 'off',
