@@ -12,8 +12,12 @@ module.exports = {
     'next/core-web-vitals',
     'prettier', // 最後に書く
   ],
+  plugins: ['@typescript-eslint'],
   rules: {
+    // 2つセット
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
+    //
+    complexity: ['error', 10],
   },
 };
