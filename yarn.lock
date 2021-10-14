@@ -1196,6 +1196,20 @@
   "resolved" "https://registry.npmjs.org/@semantic-release/error/-/error-3.0.0.tgz"
   "version" "3.0.0"
 
+"@semantic-release/git@10.0.0":
+  "integrity" "sha512-/BljvngXJzwbFFJouxHHvSzAhi5iaucF7l0kQPszD4m7Y79+FHyvQl5Q/HK7T/e8MIwU9hz321KjOZn9yfSpPg=="
+  "resolved" "https://registry.npmjs.org/@semantic-release/git/-/git-10.0.0.tgz"
+  "version" "10.0.0"
+  dependencies:
+    "@semantic-release/error" "^2.1.0"
+    "aggregate-error" "^3.0.0"
+    "debug" "^4.0.0"
+    "dir-glob" "^3.0.0"
+    "execa" "^5.0.0"
+    "lodash" "^4.17.4"
+    "micromatch" "^4.0.0"
+    "p-reduce" "^2.0.0"
+
 "@semantic-release/github@^8.0.0":
   "integrity" "sha512-T01lfh4yBZodAeo8t0U+W5hmPYR9BdnfwLDerXnGaYeLXm8+KMx4mQEBAf/UbRVlzmIKTqMx+/s9fY/mSQNV0A=="
   "resolved" "https://registry.npmjs.org/@semantic-release/github/-/github-8.0.1.tgz"
@@ -4110,14 +4124,7 @@
   dependencies:
     "ms" "^2.1.1"
 
-"debug@^4.0.0", "debug@4":
-  "integrity" "sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw=="
-  "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.2.tgz"
-  "version" "4.3.2"
-  dependencies:
-    "ms" "2.1.2"
-
-"debug@^4.0.1", "debug@^4.1.0", "debug@^4.1.1", "debug@^4.3.1":
+"debug@^4.0.0", "debug@^4.0.1", "debug@^4.1.0", "debug@^4.1.1", "debug@^4.3.1":
   "integrity" "sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ=="
   "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.1.tgz"
   "version" "4.3.1"
@@ -8507,7 +8514,7 @@
     "debug" "^4.0.0"
     "parse-entities" "^2.0.0"
 
-"micromatch@^4.0.2", "micromatch@^4.0.4":
+"micromatch@^4.0.0", "micromatch@^4.0.2", "micromatch@^4.0.4":
   "integrity" "sha512-pRmzw/XUcwXGpD9aI9q/0XOwLNygjETJ8y0ao0wdqprrzDa4YnxLcz7fQRZr8voh8V10kGhABbNcHVk5wHgWwg=="
   "resolved" "https://registry.npmjs.org/micromatch/-/micromatch-4.0.4.tgz"
   "version" "4.0.4"
