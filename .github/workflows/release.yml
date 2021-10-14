@@ -14,8 +14,7 @@ jobs:
           cache: npm
           node-version: 16
       - run: |
-          npm ci
+          npm ci --omit=dev --ignore-scripts
           npx semantic-release
         env:
-          CI: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
