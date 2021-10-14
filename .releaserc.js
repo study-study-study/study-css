@@ -9,6 +9,10 @@ module.exports = {
           { type: 'art:', release: 'patch' },
           { type: ':art:', release: 'patch' },
           { type: 'aaa', release: 'patch' },
+
+          { type: '\\:art', release: 'patch' },
+          { type: 'art\\:', release: 'patch' },
+          { type: '\\:art\\:', release: 'patch' },
         ],
       },
     ],
