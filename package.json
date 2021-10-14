@@ -74,10 +74,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/study-study-study/study-css.git"
-  },
-  "release": {
-    "branches": [
-      "master"
-    ]
   }
 }
