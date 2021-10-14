@@ -3,20 +3,15 @@ module.exports = {
     [
       '@semantic-release/commit-analyzer',
       {
-        parserOpts: {
-          headerPattern: '^:(\\w+): \\s(.*)$',
-          headerCorrespondence: ['type', 'subject'],
-        },
         releaseRules: [
-          { type: 'art', release: 'patch' },
-          { type: ':art', release: 'patch' },
-          { type: 'art:', release: 'patch' },
-          { type: ':art:', release: 'patch' },
-          { type: 'aaa', release: 'patch' },
-
-          { type: '\\:art', release: 'patch' },
-          { type: 'art\\:', release: 'patch' },
-          { type: '\\:art\\:', release: 'patch' },
+          { emoji: 'art', release: 'patch' },
+          { emoji: ':art', release: 'patch' },
+          { emoji: 'art:', release: 'patch' },
+          { emoji: ':art:', release: 'patch' },
+          { emoji: 'aaa', release: 'patch' },
+          { emoji: '\\:art', release: 'patch' },
+          { emoji: 'art\\:', release: 'patch' },
+          { emoji: '\\:art\\:', release: 'patch' },
         ],
       },
     ],
