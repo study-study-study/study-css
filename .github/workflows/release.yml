@@ -13,5 +13,5 @@ jobs:
         run: yarn
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GITHUB_TOKEN }}
-        run: npx semantic-release
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn semantic-release
