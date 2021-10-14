@@ -1163,6 +1163,16 @@
   "resolved" "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.0.7.tgz"
   "version" "1.0.7"
 
+"@semantic-release/changelog@6.0.0":
+  "integrity" "sha512-X01Me+QVMykvILockNGlXXl3dgr1QqpbRQsknQoOJQCXQGXoqY3DNQ3rBQuI8/SUK7RZwYLctg0NbPNArlo6eQ=="
+  "resolved" "https://registry.npmjs.org/@semantic-release/changelog/-/changelog-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@semantic-release/error" "^2.1.0"
+    "aggregate-error" "^3.0.0"
+    "fs-extra" "^9.0.0"
+    "lodash" "^4.17.4"
+
 "@semantic-release/commit-analyzer@^9.0.0":
   "integrity" "sha512-ncNsnrLmiykhgNZUXNvhhAjNN0me7VGIb0X5hu3ogyi5DDPapjGAHdEffO5vi+HX1BFWLRD/Ximx5PjGAKjAqQ=="
   "resolved" "https://registry.npmjs.org/@semantic-release/commit-analyzer/-/commit-analyzer-9.0.1.tgz"
@@ -1176,7 +1186,7 @@
     "lodash" "^4.17.4"
     "micromatch" "^4.0.2"
 
-"@semantic-release/error@^2.2.0":
+"@semantic-release/error@^2.1.0", "@semantic-release/error@^2.2.0":
   "integrity" "sha512-9Tj/qn+y2j+sjCI3Jd+qseGtHjOAeg7dU2/lVcqIQ9TV3QDaDXDYXcoOHU+7o2Hwh8L8ymL4gfuO7KxDs3q2zg=="
   "resolved" "https://registry.npmjs.org/@semantic-release/error/-/error-2.2.0.tgz"
   "version" "2.2.0"
@@ -2033,6 +2043,11 @@
   "integrity" "sha1-x57Zf380y48robyXkLzDZkdLS3k="
   "resolved" "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz"
   "version" "0.4.0"
+
+"at-least-node@^1.0.0":
+  "integrity" "sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg=="
+  "resolved" "https://registry.npmjs.org/at-least-node/-/at-least-node-1.0.0.tgz"
+  "version" "1.0.0"
 
 "autoprefixer@^9.8.6":
   "integrity" "sha512-7Hg99B1eTH5+LgmUBUSmov1Z3bsggQJS7v3IMGo6wcScnbRuvtMc871J9J+4bSbIqa9LSX/zypFXJ8sXHpMJeQ=="
@@ -5411,6 +5426,16 @@
     "jsonfile" "^6.0.1"
     "universalify" "^2.0.0"
 
+"fs-extra@^9.0.0":
+  "integrity" "sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ=="
+  "resolved" "https://registry.npmjs.org/fs-extra/-/fs-extra-9.1.0.tgz"
+  "version" "9.1.0"
+  dependencies:
+    "at-least-node" "^1.0.0"
+    "graceful-fs" "^4.2.0"
+    "jsonfile" "^6.0.1"
+    "universalify" "^2.0.0"
+
 "fs-extra@8.1.0":
   "integrity" "sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g=="
   "resolved" "https://registry.npmjs.org/fs-extra/-/fs-extra-8.1.0.tgz"
@@ -5896,7 +5921,7 @@
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.8.tgz"
   "version" "4.2.8"
 
-"graceful-fs@^4.1.11", "graceful-fs@^4.1.15", "graceful-fs@^4.2.4":
+"graceful-fs@^4.1.11", "graceful-fs@^4.1.15", "graceful-fs@^4.2.0", "graceful-fs@^4.2.4":
   "integrity" "sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg=="
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.8.tgz"
   "version" "4.2.8"
@@ -5906,7 +5931,7 @@
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.6.tgz"
   "version" "4.2.6"
 
-"graceful-fs@^4.1.6", "graceful-fs@^4.2.0":
+"graceful-fs@^4.1.6":
   "integrity" "sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ=="
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.6.tgz"
   "version" "4.2.6"
@@ -11307,7 +11332,7 @@
     "user-home" "^2.0.0"
     "validator" "^12.0.0"
 
-"semantic-release@>=18.0.0-beta.1", "semantic-release@18.0.0":
+"semantic-release@>=18.0.0", "semantic-release@>=18.0.0-beta.1", "semantic-release@18.0.0":
   "integrity" "sha512-/Szyhq5DTZCYry/aZqpBbK/kqv10ydn6oiiaYOXtPgDbAIkqidZcQOm+mfYFJ0sBTUaOYCKMlcPMgJycP7jDYQ=="
   "resolved" "https://registry.npmjs.org/semantic-release/-/semantic-release-18.0.0.tgz"
   "version" "18.0.0"

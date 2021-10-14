@@ -1,4 +1,14 @@
 {
-  "plugins": ["@semantic-release/commit-analyzer", "@semantic-release/github"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/github",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "docs/CHANGELOG.md"
+      }
+    ]
+  ],
   "branches": ["main"]
 }
