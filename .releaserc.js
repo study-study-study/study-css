@@ -3,7 +3,11 @@ module.exports = {
     [
       '@semantic-release/commit-analyzer',
       {
-        releaseRules: [{ type: ':art:', release: 'patch' }],
+        releaseRules: [
+          { type: ':art:', release: 'patch' },
+          { type: ':art', release: 'patch' },
+          { type: 'art:', release: 'patch' },
+        ],
       },
     ],
     '@semantic-release/release-notes-generator',
