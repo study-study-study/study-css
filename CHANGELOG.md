@@ -1,3 +1,11 @@
+# [1.7.0](https://github.com/study-study-study/study-css/compare/v1.6.0...v1.7.0) (2021-10-14)
+
+
+### Features
+
+* **pencil:** add 'graphiteWidth' option ([45a847d](https://github.com/study-study-study/study-css/commit/45a847d1ff732d47e7caa0fcd67fd3137e5c7db6))
+* **pencil:** add 'graphiteWidth' option ([c55f8f9](https://github.com/study-study-study/study-css/commit/c55f8f91631403737843dae8322ff693bfc11138))
+
 # [1.6.0](https://github.com/study-study-study/study-css/compare/v1.5.0...v1.6.0) (2021-10-14)
 
 
