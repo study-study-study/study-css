@@ -6652,7 +6652,7 @@
   dependencies:
     "ci-info" "^2.0.0"
 
-"is-ci@^3.0.0", "is-ci@3.0.0":
+"is-ci@^3.0.0":
   "integrity" "sha512-kDXyttuLeslKAHYL/K28F2YkM3x5jvFPEw3yXbRptXydjD9rpLEz+C5K5iutY9ZiUu6AP41JdvRQwF4Iqs4ZCQ=="
   "resolved" "https://registry.npmjs.org/is-ci/-/is-ci-3.0.0.tgz"
   "version" "3.0.0"
