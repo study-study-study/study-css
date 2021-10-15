@@ -3,17 +3,20 @@ module.exports = {
     [
       '@semantic-release/commit-analyzer',
       {
-        headerPattern: /^(:.*?:) (.*)$/,
-        releaseRules: [
-          { type: 'art', release: 'patch' },
-          { type: ':art', release: 'patch' },
-          { type: 'art:', release: 'patch' },
-          { type: ':art:', release: 'patch' },
-          { type: 'aaa', release: 'patch' },
-          { type: '\\:art', release: 'patch' },
-          { type: 'art\\:', release: 'patch' },
-          { type: '\\:art\\:', release: 'patch' },
-        ],
+        parserOpts: {
+          noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
+        },
+        // headerPattern: /^(:.*?:) (.*)$/,
+        // releaseRules: [
+        //   { type: 'art', release: 'patch' },
+        //   { type: ':art', release: 'patch' },
+        //   { type: 'art:', release: 'patch' },
+        //   { type: ':art:', release: 'patch' },
+        //   { type: 'aaa', release: 'patch' },
+        //   { type: '\\:art', release: 'patch' },
+        //   { type: 'art\\:', release: 'patch' },
+        //   { type: '\\:art\\:', release: 'patch' },
+        // ],
       },
     ],
     '@semantic-release/release-notes-generator',
