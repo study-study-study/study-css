@@ -1,22 +1,46 @@
 module.exports = {
   plugins: [
+    // [
+    //   '@semantic-release/commit-analyzer',
+    //   {
+    //     parserOpts: {
+    //       noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
+    //     },
+    //     // headerPattern: /^(:.*?:) (.*)$/,
+    //     // releaseRules: [
+    //     //   { type: 'art', release: 'patch' },
+    //     //   { type: ':art', release: 'patch' },
+    //     //   { type: 'art:', release: 'patch' },
+    //     //   { type: ':art:', release: 'patch' },
+    //     //   { type: 'aaa', release: 'patch' },
+    //     //   { type: '\\:art', release: 'patch' },
+    //     //   { type: 'art\\:', release: 'patch' },
+    //     //   { type: '\\:art\\:', release: 'patch' },
+    //     // ],
+    //   },
+    // ],
     [
-      '@semantic-release/commit-analyzer',
+      'semantic-release-gitmoji',
       {
-        parserOpts: {
-          noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
+        releaseRules: {
+          major: [':boom:'],
+          minor: [':sparkles:'],
+          patch: [':bug:', ':ambulance:', ':lock:', ':art:'],
         },
-        // headerPattern: /^(:.*?:) (.*)$/,
-        // releaseRules: [
-        //   { type: 'art', release: 'patch' },
-        //   { type: ':art', release: 'patch' },
-        //   { type: 'art:', release: 'patch' },
-        //   { type: ':art:', release: 'patch' },
-        //   { type: 'aaa', release: 'patch' },
-        //   { type: '\\:art', release: 'patch' },
-        //   { type: 'art\\:', release: 'patch' },
-        //   { type: '\\:art\\:', release: 'patch' },
-        // ],
+        // releaseNotes: {
+        //   template,
+        //   partials: { commitTemplate },
+        //   helpers: {
+        //     datetime: function (format = 'UTC:yyyy-mm-dd') {
+        //       return dateFormat(new Date(), format);
+        //     },
+        //   },
+        //   issueResolution: {
+        //     template: '{baseUrl}/{owner}/{repo}/issues/{ref}',
+        //     baseUrl: 'https://github.com',
+        //     source: 'github.com',
+        //   },
+        // },
       },
     ],
     '@semantic-release/release-notes-generator',
