@@ -3,3 +3,4 @@
 /.eslintrc.js
 /lint-staged.config.js
 /prettier.config.js
+/commitlint.config.js
