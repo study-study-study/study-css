@@ -1,0 +1,6 @@
+/data/
+/src/presenter/old/
+/.eslintrc.js
+/lint-staged.config.js
+/prettier.config.js
+/commitlint.config.js
