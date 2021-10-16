@@ -12,6 +12,5 @@ module.exports = {
     ],
     '@semantic-release/github',
   ],
-  extends: ['semantic-release-config-gitmoji'],
   branches: ['main'],
 };
